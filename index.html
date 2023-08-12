@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Stop</title>
+    <style>
+        body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+header, nav, section, footer {
+    padding: 20px;
+}
+
+header {
+    background-color: #aba806;
+    color: #fff;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #a14fd8;
+    padding: 10px;
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #201f1f;
+    padding-left: 50px;
+}
+nav a:hover {
+    text-decoration: none;
+    color: #0d29b8;
+}
+
+section.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.price {
+    color: #ff6600;
+    font-weight: bold;
+}
+
+button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #cc5500;
+}
+
+.cart {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.cart h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Shopping Stop</h1>
+
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="products">
+        <div class="product">
+            <img src="product1.jpeg" alt="product1">
+            <h2>Nike Shoes</h2>
+            <p>The Nike Airforce 1 gives you the support you need to match your speed.</p>
+            <span class="price">$99.99</span>
+            <button onclick="addToCart('Nike Shoes',99.99)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="product2.jpeg" alt="product2">
+            <h2>Smart watch with Earbuds</h2>
+            <p>SKG Smart Watch, Fitness Tracker Health Monitor for Heart Rate...</p>
+            <span class="price">$78.23</span>
+            <button onclick="addToCart('Smart watch with Earbuds', 78.23)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="product3.avif" alt="product2">
+            <h2>Maroon Maxi</h2>
+            <p>Floral Printed Long Sleeve Flared Maxi Dress</p>
+            <span class="price">$59.9</span>
+            <button onclick="addToCart('Maroon Maxi', 59.9)">Add to Cart</button>
+        </div>
+    </section>
+    <section class="cart" id="cart">
+        <h3>Shopping Cart</h3>
+        <ul id="cart-items"></ul>
+        <p>Total: <span id="cart-total">$0.00</span></p>
+    </section>
+    <footer>
+        <p>&copy; 2023 E-commerce Portfolio. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
